@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Layout</title>
+    <style>
+        #cart-container {
+            display: flex;
+            border: 5px solid grey;
+            /* set width to full screen */
+            width: 100%;
+        }
+
+        #cart-container img {
+            height: auto;
+            border-radius: 8px;
+            /* set width to have a portion of fixed screen */
+            width: 40%;
+        }
+
+        #items {
+            /* set width to have a portion of fixed screen */
+            width: 60%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .item {
+            border-radius: 5px;
+        }
+
+        .first {
+            background-color: rgb(51, 124, 124);
+            padding: 15px;
+        }
+
+        .second {
+            background-color: bisque;
+            padding: 15px;
+        }
+
+        .third {
+            background-color: aquamarine;
+            padding: 15px;
+        }
+
+        #content {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            #cart-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            #cart-container img {
+                /* width: 30%; */
+                /* max-width: 100%; */
+                height: auto;
+                width: 100%;
+            }
+            #content {
+                width: 100%;
+                margin-left: 0;
+            }
+            #items {
+                /* Center items horizontally */
+                justify-content: center;
+                /* Ensure #items only takes up the space it needs */
+                width: fit-content;
+                /* Center #items within the #content container */
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="cart-container">
+        <img src="./8.2 Responsiveness/daenerys.jpeg" alt="cart image">
+        <div id="content">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident atque neque ut pariatur dignissimos
+                nisi voluptate autem, ducimus exercitationem excepturi laudantium quas eaque corrupti voluptatibus.
+                Perspiciatis in cum mollitia illo.</p>
+            <div id="items">
+                <div class="item first">❤ Wishlist</div>
+                <div class="item second">🎁 Cart</div>
+                <div class="item third">✔ Payment</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
